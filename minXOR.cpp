@@ -1,5 +1,5 @@
-// Online C++ compiler to run C++ program online
 #include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int minXOR_nsquare(int arr[], int n){
@@ -14,6 +14,16 @@ int minXOR_nsquare(int arr[], int n){
     return minXOR;
 }
 
+int minXOR_nlogn(int arr[], int n){
+    sort(arr, arr+n);
+    int minXOR = arr[0]*arr[1];
+    for (int i=0; i<n-1; i++){
+        int var = arr[i] ^ arr[i+1];
+        minXOR = min(minXOR, var);
+    }
+    return minXOR;
+}
+
 int main(){
     cout << "Enter the size of array: ";
     int n;
@@ -24,5 +34,8 @@ int main(){
         cin >> arr[i];
     }
     int x = minXOR_nsquare(arr, n);
-    cout << "The minimum XOR is:" << x << endl;
+    cout << "The minimum XOR (time complexity N^2) is:" << x << endl;
+    int y = minXOR_nlogn(arr, n);
+    cout << "The minimum XOR (time complexity N*log(N)) is:" << y << endl;
+    
 }

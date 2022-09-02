@@ -14,7 +14,7 @@ int search(int arr[], int n, int x){
 int main(){
     int n;
     int x;
-    cout << "Enter the size of array:" << endl;
+    cout << "Enter the size of array, followed by array elements:" << endl;
     cin >> n;
     int arr[n];
     for (int i=0; i<n; i++){

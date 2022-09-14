@@ -12,4 +12,4 @@
 ## Time complexity:
 1. [catalan_recursive.cpp](https://github.com/aadarshgupta1412/DSA_codes/blob/main/Catalan_number/catalan_recursive.cpp) : O(2^n)
 2. [catalan_dynamic_programming.cpp](https://github.com/aadarshgupta1412/DSA_codes/blob/main/Catalan_number/catalan_dynamic_programming.cpp) : O(n^2)
-3. [catalan_binomial.cpp](https://github.com/aadarshgupta1412/DSA_codes/blob/main/Catalan_number/catalan_binomial.cpp)
+3. [catalan_binomial.cpp](https://github.com/aadarshgupta1412/DSA_codes/blob/main/Catalan_number/catalan_binomial.cpp) : O(n)

@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-unsigned long int catalan(int n){
+unsigned long int catalan(unsigned int n){
     if (n<=1){
         return 1;
     }

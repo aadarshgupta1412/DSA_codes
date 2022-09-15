@@ -14,20 +14,9 @@ void multiply_matrix(int F[2][2], int M[2][2]){
 }
 
 void matrix_power(int F[2][2], int n){
-    //int a, b, c, d;
-    if (n==0){
-        F[0][0] = F[1][0] = F[0][1] = F[1][1] = 0;
-    } 
-    for (int i=1; i<=n; i++){
-        int a, b, c, d;
-        a = F[0][0]*F[0][0] + F[0][1]*F[1][0];
-        b = F[0][0]*F[0][1] + F[0][1]*F[1][1];
-        c = F[1][0]*F[0][0] + F[1][1]*F[1][0];
-        d = F[1][0]*F[0][1] + F[1][1]*F[1][1];
-        F[0][0] = a;
-        F[0][1] = b;
-        F[1][0] = c;
-        F[1][1] = d;
+    int M[2][2] = {{1, 1}, {1, 0}};
+    for (int i=1; i<n; i++){
+        multiply_matrix(F, M);
     }
 }
 
@@ -52,7 +41,7 @@ int fibonacci_dynamic(int n){
 
 // Time Complexity: O(n)
 int fibonacci_matrix(int n){
-    int F[2][2] = {{1, 1}, {0, 1}};
+    int F[2][2] = {{1, 1}, {1, 0}};
     if (n==0) return 0;
     if (n==1) return 1;
     matrix_power(F, n-1);

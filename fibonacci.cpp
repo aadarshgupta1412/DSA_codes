@@ -48,11 +48,24 @@ int fibonacci_matrix(int n){
     return F[0][0];
 }
 
+// Time Complexity: O(log n)
+int fibonacci_half_recursion(int n){
+    if (n==0) return 0;
+    if ((n==1) || (n==2)) return 1;
+    int k;
+    if ((n%2)==0){
+        k = n/2;
+        return (2*fibonacci_half_recursion(k-1)+fibonacci_half_recursion(k))*fibonacci_half_recursion(k);
+    }
+    k = (n+1)/2;
+    return fibonacci_half_recursion(k-1)*fibonacci_half_recursion(k-1)+fibonacci_half_recursion(k)*fibonacci_half_recursion(k);
+}
+
 int main() {
     int n;
     cout<<"Enter n: ";
     cin>>n;
-    int output = fibonacci_matrix(n);
+    int output = fibonacci_half_recursion(n);
     printf("%dth fibonnaci element = %d", n, output);
 
     return 0;

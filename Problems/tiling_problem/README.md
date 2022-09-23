@@ -3,8 +3,10 @@
 1. https://leetcode.com/problems/domino-and-tromino-tiling/
 
 # Solution
-Recursive solution: a(n) = 2 * a(n-1) + a(n-3)  
-General solution: a(n) = a(n-1) + a(n-2) + 2 * (a(n-3) + ... a(1))  
+## Recursive solution: 
+a(n) = 2 * a(n-1) + a(n-3)  
+## General solution: 
+a(n) = a(n-1) + a(n-2) + 2 * (a(n-3) + ... a(1))  
 a(1) = 1; a(2) = 2; a(3) = 5
 
 # Resources

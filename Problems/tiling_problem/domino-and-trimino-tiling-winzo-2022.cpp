@@ -1,5 +1,5 @@
-class Solution {
-public:
+int main(){
+    
     int mod=1e9+7;
     int solve(int n,vector<int>&dp){
         //base case
@@ -16,5 +16,5 @@ public:
         
         vector<int>dp(n+10,-1);
         return solve(n,dp);
-    }
-};
+
+}

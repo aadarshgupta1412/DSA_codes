@@ -1,6 +1,6 @@
 # Problem
 
-1. https://leetcode.com/problems/domino-and-tromino-tiling/
+1. https://leetcode.com/problems/domino-and-tromino-tiling/  
 (asked in Winzo 2022 Placement Tests, IIT Delhi)
 
 # Solution

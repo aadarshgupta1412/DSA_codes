@@ -2,7 +2,6 @@
 using namespace std;
 
 int binary_search(int arr[], int start, int end, int x){
-
     while (start<=end){
         int mid = start + (end-start)/2;    //do some experiment here
         if (arr[mid]==x){
@@ -18,9 +17,7 @@ int binary_search(int arr[], int start, int end, int x){
     return -1;
 }
 
-
 int main() {
-    
     cout << "Enter the size of array,followed by the array elements: " << endl;
     int n;
     cin >> n;

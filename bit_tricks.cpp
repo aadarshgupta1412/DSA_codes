@@ -69,3 +69,24 @@ int run_of_set_bits_from_ith(int x, int i){
 int run_of_clear_bits_from_ith(int x, int i){
     return x | ~(x - (1 << i));
 }
+
+int number_of_set_bits(int x){
+    int count = 0;
+    while(x){
+        x&=(x-1);
+        count++;
+    }
+    return count;
+}
+
+int find_log_base_two(int x){
+    int count = 0;
+    while (x>>=1){
+        count++;
+    }
+    return count;
+}
+
+int find_last_set_bit(int x){
+    return find_log_base_two(x & -x)+1;
+}

@@ -61,6 +61,16 @@ int fibonacci_half_recursion(int n){
     return fibonacci_half_recursion(k-1)*fibonacci_half_recursion(k-1)+fibonacci_half_recursion(k)*fibonacci_half_recursion(k);
 }
 
+// Time Complexity: O(n)
+int memo[100] = {0};
+
+int fibonacci_dp(int n){
+    if (n<=1) return n;
+    if (memo[n]!=0) return memo[n];
+    memo[n] = fibonacci_dp(n-1)+fibonacci_dp(n-2);
+    return memo[n];
+}
+
 int main() {
     int n;
     cout<<"Enter n: ";

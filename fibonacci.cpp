@@ -62,11 +62,11 @@ int fibonacci_half_recursion(int n){
 }
 
 // Time Complexity: O(n)
-int memo[100] = {0};
+int memo[100] = {-1};
 
 int fibonacci_dp(int n){
     if (n<=1) return n;
-    if (memo[n]!=0) return memo[n];
+    if (memo[n]!=-1) return memo[n];
     memo[n] = fibonacci_dp(n-1)+fibonacci_dp(n-2);
     return memo[n];
 }

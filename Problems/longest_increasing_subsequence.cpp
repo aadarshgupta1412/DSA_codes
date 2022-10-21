@@ -1,3 +1,7 @@
+// Problem: https://leetcode.com/problems/longest-increasing-subsequence/
+// https://www.interviewbit.com/blog/longest-increasing-subsequence/
+// https://www.geeksforgeeks.org/longest-increasing-subsequence-dp-3/
+
 class Solution {
 public:
     

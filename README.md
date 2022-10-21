@@ -1,2 +1,2 @@
 # DSA_codes
-All Data Structures and Algorithms code practice
+All Data Structures and Algorithms codes, problems and practice
